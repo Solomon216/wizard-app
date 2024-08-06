@@ -1,10 +1,12 @@
 import React from "react";
-import wizard from "../images/book.png"
+import wizard from "../images/book.png";
+import ThreeScene from "./ThreeScene";
 
 export default function Hero() {
   return (
     <div className="w-full h-screen relative">
-      <div className="relative flex gap-6 flex-col justify-center items-center h-full">
+      <ThreeScene className="absolute top-0 left-0 w-full h-full z-0" />
+      <div className="relative flex gap-6 flex-col justify-center items-center h-full z-10">
         <h1 className="text-6xl text-white league">WIZARDLENZ XR STUDIO</h1>
         <p className="text-white text-2xl">See the Magic! Be the Magic!</p>
         <div className="relative w-[1031px] h-[300px] flex justify-center items-center">

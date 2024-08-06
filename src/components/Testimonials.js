@@ -6,30 +6,36 @@ const TestimonialSection = () => {
   const [testimonials, setTestimonials] = useState([]);
   const cardsRef = useRef([]);
 
-  useEffect(() => {
-    fetch('src\data\testimonial.json')
-      .then(response => response.json())
-      .then(data => setTestimonials(data))
-      .catch(error => console.error('Error fetching testimonials:', error));
-  }, []);
-
-  useEffect(() => {
-    if (testimonials.length > 0) {
-      gsap.from(cardsRef.current, {
-        opacity: 0,
-        y: 20,
-        stagger: 0.3,
-        duration: 1,
-        ease: 'power3.out',
-      });
+  const data = [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "title": "CEO, Company A",
+      "testimonial": "This service has been amazing! I've never experienced such great support.",
+      "image": "path/to/image1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "title": "Marketing Director, Company B",
+      "testimonial": "The product exceeded our expectations and the team was very professional.",
+      "image": "path/to/image2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "title": "CTO, Company C",
+      "testimonial": "Highly recommend this company for their innovative solutions and customer service.",
+      "image": "path/to/image3.jpg"
     }
-  }, [testimonials]);
+  ]
+
 
   return (
     <div className="testimonial-section">
       <h2>Testimonials</h2>
       <div className="testimonials-container">
-        {testimonials.map((testimonial, index) => (
+        {data.map((testimonial, index) => (
           <div
             key={testimonial.id}
             className="testimonial-card"
