@@ -1,73 +1,94 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import starTexture from "../images/star.png"; // Ensure the star.png file is in the src folder
 
-const ThreeScene = ({ className }) => {
+const Starfield = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
-    const currentMount = mountRef.current;
-    let scene, camera, renderer, starGeo, stars;
+    const currentMount = mountRef.current; // Store the initial value of mountRef.current
+    let scene, camera, renderer, stars, starGeo;
+    let velocities = [], accelerations = [];
 
-    // Initialize the scene
-    scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-    camera.position.z = 1;
+    function init() {
+      scene = new THREE.Scene();
 
-    renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    currentMount.appendChild(renderer.domElement);
+      camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+      camera.position.z = 1;
+      camera.rotation.x = Math.PI / 2;
 
-    // Create star geometry using BufferGeometry
-    starGeo = new THREE.BufferGeometry();
-    const starVertices = [];
-    for (let i = 0; i < 6000; i++) {
-      starVertices.push(
-        Math.random() * 600 - 300,
-        Math.random() * 600 - 300,
-        Math.random() * 600 - 300
-      );
-    }
-    starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+      renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      currentMount.appendChild(renderer.domElement);
 
-    // Load the star texture
-    const sprite = new THREE.TextureLoader().load('../images/star.png');
-    const starMaterial = new THREE.PointsMaterial({
-      color: 0xaaaaaa,
-      size: 0.7,
-      map: sprite,
-      blending: THREE.AdditiveBlending,
-      transparent: true
-    });
+      starGeo = new THREE.BufferGeometry();
+      const starCount = 6000;
+      const positions = new Float32Array(starCount * 3);
 
-    stars = new THREE.Points(starGeo, starMaterial);
-    scene.add(stars);
+      for (let i = 0; i < starCount; i++) {
+        const x = Math.random() * 600 - 300;
+        const y = Math.random() * 600 - 300;
+        const z = Math.random() * 600 - 300;
+        positions[i * 3] = x;
+        positions[i * 3 + 1] = y;
+        positions[i * 3 + 2] = z;
+        velocities[i] = 0;
+        accelerations[i] = 0.001;
+      }
 
-    // Animation loop
-    const animate = () => {
-      starGeo.attributes.position.array.forEach((_, i) => {
-        if (i % 3 === 1) { // Only update y coordinate
-          starGeo.attributes.position.array[i] -= 0.1;
-          if (starGeo.attributes.position.array[i] < -300) {
-            starGeo.attributes.position.array[i] = 300;
-          }
-        }
+      starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+      let sprite = new THREE.TextureLoader().load(starTexture);
+      let starMaterial = new THREE.PointsMaterial({
+        color: 0xaaaaaa,
+        size: 0.7,
+        map: sprite,
       });
 
+      stars = new THREE.Points(starGeo, starMaterial);
+      scene.add(stars);
+
+      window.addEventListener('resize', onWindowResize, false);
+
+      animate();
+    }
+
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function animate() {
+      const positions = starGeo.attributes.position.array;
+      for (let i = 0; i < positions.length; i += 3) {
+        velocities[i / 3] += accelerations[i / 3];
+        positions[i + 1] -= velocities[i / 3];
+
+        if (positions[i + 1] < -200) {
+          positions[i + 1] = 200;
+          velocities[i / 3] = 0;
+        }
+      }
       starGeo.attributes.position.needsUpdate = true;
+      stars.rotation.y += 0.002;
+
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
-    };
+    }
 
-    animate();
+    init();
 
-    // Cleanup on unmount
     return () => {
-      currentMount.removeChild(renderer.domElement);
+      window.removeEventListener('resize', onWindowResize);
+      if (renderer && currentMount) {
+        currentMount.removeChild(renderer.domElement);
+      }
       renderer.dispose();
     };
   }, []);
 
-  return <div ref={mountRef} className={className}></div>;
+  return <div ref={mountRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />;
 };
 
-export default ThreeScene;
+export default Starfield;
