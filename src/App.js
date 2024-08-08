@@ -2,13 +2,13 @@ import React from "react";
 import Hero from "./components/Hero";
 
 import "./App.css";
-import TestimonialSection from "./components/Testimonials";
+import Services from "./components/Services";
 
 function App() {
   return(
     <div>
       <Hero />
-      <TestimonialSection />
+      <Services />
     </div>
   )
 }
