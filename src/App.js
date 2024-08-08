@@ -1,14 +1,15 @@
 import React from "react";
 import Hero from "./components/Hero";
+import Scene from "./components/Scene";
 
 import "./App.css";
-import ActionAreaCard from "./components/cards";
+
 
 function App() {
   return(
     <div>
       <Hero />
-      <ActionAreaCard/>
+      <Scene />
     </div>
   )
 }
