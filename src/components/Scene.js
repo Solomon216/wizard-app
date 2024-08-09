@@ -29,10 +29,9 @@ export default function Scene() {
     });
   
     return (
-      <div className="App" ref={component}>
+      <div className="bg-[url('/src/images/jose-figueroa-HKAS_D2WJg4-unsplash.jpg)]" ref={component}>
         <div className="firstContainer">
           <h1>Horizontal Scrolling with GSAP & React</h1>
-          <h2>Scroll down to see the cards</h2>
         </div>
         <div ref={slider} className="container" style={{ display: "flex", overflow: "hidden" }}>
           <div className="panel" style={{ flex: "0 0 100%" }}>
@@ -64,7 +63,6 @@ export default function Scene() {
             />
           </div>
         </div>
-        <div className="lastContainer">End of Cards</div>
       </div>
     );
   }
