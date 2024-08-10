@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import ActionAreaCard from "./Testimonials";
-import "../styles.css";
+import "./styles.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Scene() {
