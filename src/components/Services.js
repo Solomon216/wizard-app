@@ -6,10 +6,10 @@ import './styles.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { id: 1, title: 'Web Development', description: 'Building responsive and modern websites.' },
-  { id: 2, title: 'Mobile Development', description: 'Creating cross-platform mobile applications.' },
-  { id: 3, title: 'UI/UX Design', description: 'Designing intuitive and engaging user interfaces.' },
-  { id: 4, title: 'AI & Machine Learning', description: 'Integrating AI solutions into your business.' },
+  { id: 1, title: 'Starlight Scholars Guild', description: 'A training program for school and college students as well as professionals on AR, VR, MR and AI technologies.' },
+  { id: 2, title: 'LunarCode Lab', description: 'Desingning and development of software products on AR,VR,MR and AI for commercial software products.' },
+  { id: 3, title: 'Elemental Engineering', description: 'Creation of tailored software solutions to help businesses enhance their processes and increase client engagement using VR, AR, MR, Metaverse, and AI technologies.' },
+  { id: 4, title: 'Wings of Wisdom', description: 'Organising workshops, seminars, and campaigns to educate the general public, students, and industries about the future implications and benefits' },
 ];
 
 const Services = () => {
@@ -31,10 +31,9 @@ const Services = () => {
         ease: "power4.out",
         scrollTrigger: {
           trigger: service,
-          start: "top 80%",
-          end: "bottom 10%",
-          scrub: 1,
-          markers: true
+          start: "top 150%",
+          end: "bottom 0%",
+          scrub: 1
         }
       });
     });
