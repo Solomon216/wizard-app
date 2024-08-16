@@ -4,7 +4,7 @@ import Scene from "./components/Scene";
 
 import "./App.css";
 import Services from "./components/Services";
-
+import ImageMorph from "./components/anime";
 
 function App() {
   return(
@@ -12,6 +12,7 @@ function App() {
       <Hero />
       <Scene />
       <Services />
+      <ImageMorph />
     </div>
   )
 }
