@@ -109,3 +109,30 @@
   z-index: 3;
 }
 
+@font-face {
+  font-family: "khuja";
+  src: url("/src/fonts/Arkhip_font.ttf");
+}
+
+.lizzie {
+  font-family: "khuja";
+  font-size: 500%;
+  letter-spacing: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #7e4bb2, #392d69); /* Gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* This makes the gradient text visible */
+}
+
+@font-face {
+  font-family: "service";
+  src: url("/src/fonts/LeoSansFree.ttf");
+}
+
+.service-name{
+  font-family: "service";
+  letter-spacing: 1rem;
+  font-size: 400%;
+}
