@@ -10,8 +10,8 @@ function App() {
   return(
     <div>
       <Hero />
-      <Scene />
       <Services />
+      <Scene />
       <ImageMorph />
     </div>
   )
