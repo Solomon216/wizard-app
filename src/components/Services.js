@@ -20,7 +20,7 @@ const Services = () => {
       gsap.fromTo(service, {
         opacity: 0,
         y: 100,
-        rotation: index % 2 === 0 ? 15 : -15,
+        rotation: index % 2 === 0 ? 20 : -20,
         scale: 0.8,
       }, {
         opacity: 1,
@@ -33,7 +33,7 @@ const Services = () => {
           trigger: service,
           start: "top 150%",
           end: "bottom 0%",
-          scrub: 1
+          scrub: 3
         }
       });
     });
