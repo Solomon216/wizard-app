@@ -1,0 +1,39 @@
+.scramble-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .scramble-container p {
+    font-size: 1.5em;
+    color: #FF6347; /* Tomato */
+    margin: 10px 0;
+    opacity: 0;
+    font-weight: bold;
+  }
+  
+  .scramble-container p:nth-child(2) {
+    color: #4682B4; /* SteelBlue */
+  }
+  
+  .scramble-container p:nth-child(3) {
+    color: #32CD32; /* LimeGreen */
+  }
+  
+  .scramble-container p:nth-child(4) {
+    color: #FFD700; /* Gold */
+  }
+  
+  .text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #FF6347; /* Tomato color */
+    margin-top: 50px;
+  }
+  
+  .dud {
+    color: #999; /* Color for scrambled characters */
+  }
+  
