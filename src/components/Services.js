@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   { id: 1, title: 'Starlight Scholars Guild', description: 'A training program for school and college students as well as professionals on AR, VR, MR and AI technologies.' },
   { id: 2, title: 'LunarCode Lab', description: 'Desingning and development of software products on AR,VR,MR and AI for commercial software products.' },
-  { id: 3, title: 'Elemental Engineering', description: 'Creation of tailored software solutions to help businesses enhance their processes and increase client engagement using VR, AR, MR, Metaverse, and AI technologies.' },
-  { id: 4, title: 'Wings of Wisdom', description: 'Organising workshops, seminars, and campaigns to educate the general public, students, and industries about the future implications and benefits' },
+  { id: 3, title: 'Elemental Engineering', description: 'Creation of tailored software solutions to help businesses enhance their processes and increase client engagement.' },
+  { id: 4, title: 'Wings of Wisdom', description: 'Organising workshops, seminars, and campaigns to educate the general public, students, and industries.' },
 ];
 
 const Services = () => {
@@ -49,8 +49,8 @@ const Services = () => {
             key={id}
             ref={(el) => (serviceRefs.current[index] = el)}
           >
-            <h3 className="service-title">{title}</h3>
-            <p className="service-description">{description}</p>
+            <h3 className="service-title league">{title}</h3>
+            <p className="service-description futstat">{description}</p>
           </div>
         ))}
       </div>

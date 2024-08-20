@@ -45,6 +45,7 @@
   text-align: center;
   height: 250px;
   overflow: hidden;
+  
 }
 
 .service-item:nth-child(1) {
@@ -135,4 +136,15 @@
   font-family: "service";
   letter-spacing: 1rem;
   font-size: 400%;
+  color: #f629d0;
+}
+
+@font-face {
+  font-family: "fustat";
+  src: url("/src/fonts/Fustat.ttf");
+}
+
+.futstat{
+  font-family: "fustat";
+  font-size:larger;
 }
