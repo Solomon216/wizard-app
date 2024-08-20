@@ -12,7 +12,6 @@ function App() {
     <div>
       <Hero />
       <ScrambleText />
-      <Scene />
       <Services />
       <Scene />
       <ImageMorph />
