@@ -14,6 +14,7 @@ function App() {
       <ScrambleText />
       <Scene />
       <Services />
+      <Scene />
       <ImageMorph />
     </div>
   )

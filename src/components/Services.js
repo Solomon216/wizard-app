@@ -40,17 +40,20 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="services-section">
-      {services.map(({ id, title, description }, index) => (
-        <div
-          className={`service-item service-${index + 1}`}
-          key={id}
-          ref={(el) => (serviceRefs.current[index] = el)}
-        >
-          <h3 className="service-title">{title}</h3>
-          <p className="service-description">{description}</p>
-        </div>
-      ))}
+    <div className=' bg-gray-200 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-[80px] bg-opacity-5 p-1 m-5'>
+      <h1 className="text-white service-name">Our Spellbound Services</h1>
+      <div className="services-section">
+        {services.map(({ id, title, description }, index) => (
+          <div
+            className={`service-item service-${index + 1}`}
+            key={id}
+            ref={(el) => (serviceRefs.current[index] = el)}
+          >
+            <h3 className="service-title">{title}</h3>
+            <p className="service-description">{description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
