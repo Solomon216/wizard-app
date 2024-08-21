@@ -5,14 +5,18 @@ import Scene from "./components/Scene";
 import "./App.css";
 import Services from "./components/Services";
 import About from "./components/Abouts";
+import Navbar from "./components/navbar";
+import Contact from "./components/contact";
 
 function App() {
   return(
     <div>
+      <Navbar />
       <Hero />
       <About />
       <Services />
       <Scene />
+      <ImageMorph />
     </div>
   )
 }
