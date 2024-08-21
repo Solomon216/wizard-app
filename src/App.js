@@ -16,7 +16,6 @@ function App() {
       <About />
       <Services />
       <Scene />
-      <ImageMorph />
     </div>
   )
 }
