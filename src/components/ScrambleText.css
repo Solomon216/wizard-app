@@ -2,13 +2,11 @@
     font-family: 'Arial', sans-serif;
     color: #333;
     text-align: center;
-    margin-top: 50px;
   }
   
   .scramble-container p {
     font-size: 1.5em;
     color: #FF6347; /* Tomato */
-    margin: 10px 0;
     opacity: 0;
     font-weight: bold;
   }
@@ -27,10 +25,8 @@
   
   .text {
     font-family: 'Arial', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.8em;
     text-align: center;
-    color: #FF6347; /* Tomato color */
-    margin-top: 50px;
   }
   
   .dud {

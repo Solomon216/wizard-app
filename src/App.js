@@ -4,19 +4,15 @@ import Scene from "./components/Scene";
 
 import "./App.css";
 import Services from "./components/Services";
-import ImageMorph from "./components/anime";
-import ScrambleText from "./components/about";
-import AnimatedTitle from "./components/about2";
+import About from "./components/Abouts";
 
 function App() {
   return(
     <div>
       <Hero />
-      <AnimatedTitle />
-      <ScrambleText />
+      <About />
       <Services />
       <Scene />
-      <ImageMorph />
     </div>
   )
 }
