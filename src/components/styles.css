@@ -3,9 +3,6 @@
   text-align: center;
 }
 
-.firstContainer {
-  padding: 100px;
-}
 
 .container {
   width: 100%;
@@ -147,4 +144,15 @@
 .futstat{
   font-family: "fustat";
   font-size:larger;
+}
+
+@font-face {
+  font-family: "Sail";
+  src: url("/src/fonts/Sail-Regular.otf");
+}
+
+.sail{
+  font-family: "Sail";
+  color: #f629d0;
+  font-size: 600%;
 }

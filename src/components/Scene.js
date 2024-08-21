@@ -33,7 +33,7 @@ export default function Scene() {
   return (
     <div className="" ref={component}>
       <div className="firstContainer">
-        <h1>Horizontal Scrolling with GSAP & React</h1>
+        <h1 className="sail">Testimonials</h1>
       </div>
       <div ref={slider} className="container" style={{ display: "flex", overflow: "hidden" }}>
         <div className="panel" style={{ flex: "0 0 100%" }}>
