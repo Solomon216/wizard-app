@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import starTexture from "../images/star.png"; // Ensure the star.png file is in the src folder
+import starTexture from "../images/star.png";
 
 const Starfield = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
-    const currentMount = mountRef.current; // Store the initial value of mountRef.current
+    const currentMount = mountRef.current;
     let scene, camera, renderer, stars, starGeo;
     let velocities = [], accelerations = [];
 
@@ -19,23 +19,12 @@ const Starfield = () => {
 
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(window.devicePixelRatio); // Improve the quality on high-DPI screens
+      renderer.setPixelRatio(window.devicePixelRatio); // Ensure high resolution on all screens
       currentMount.appendChild(renderer.domElement);
 
       starGeo = new THREE.BufferGeometry();
-      
-      const isMobile = window.innerWidth <= 768; // Mobile screen size
-      const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024; // Tablet screen size
-      
-      let starCount;
-      if (isMobile) {
-        starCount = 2000; // Fewer stars for mobile devices
-      } else if (isTablet) {
-        starCount = 4000; // Moderate number of stars for tablets
-      } else {
-        starCount = 6000; // Full star count for desktops
-      }
-      
+
+      const starCount = window.innerWidth <= 768 ? 2000 : window.innerWidth <= 1024 ? 4000 : 6000; // Adjust star count
       const positions = new Float32Array(starCount * 3);
 
       for (let i = 0; i < starCount; i++) {
@@ -51,10 +40,10 @@ const Starfield = () => {
 
       starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-      let sprite = new THREE.TextureLoader().load(starTexture);
-      let starMaterial = new THREE.PointsMaterial({
+      const sprite = new THREE.TextureLoader().load(starTexture);
+      const starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: isMobile ? 0.4 : (isTablet ? 0.6 : 0.7), // Smaller star size on mobile, medium on tablet
+        size: window.innerWidth <= 768 ? 0.4 : window.innerWidth <= 1024 ? 0.6 : 0.7,
         map: sprite,
         transparent: true,
       });
@@ -102,7 +91,7 @@ const Starfield = () => {
     };
   }, []);
 
-  return <div ref={mountRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />;
+  return <div ref={mountRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }} />;
 };
 
 export default Starfield;
