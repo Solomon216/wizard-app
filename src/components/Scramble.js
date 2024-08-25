@@ -61,10 +61,8 @@ class TextScramble {
 const ScrambleText = () => {
   const elRef = useRef(null);
   const phrases = [
-    'Embrace the future, innovate today.',
-    'Technology shapes our path forward.',
-    'Books open minds to new ideas.',
-    'Entrepreneurship drives the economy.',
+    "See the Magic",
+    "Be the Magic"
   ];
 
   useEffect(() => {
@@ -82,7 +80,7 @@ const ScrambleText = () => {
     next();
   }, []);
 
-  return <div className="text" ref={elRef}></div>;
+  return <div className="text text-[#F9E400] font-bold" ref={elRef}></div>;
 };
 
 export default ScrambleText;

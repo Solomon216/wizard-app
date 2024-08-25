@@ -15,7 +15,7 @@ const AnimatedTitle = () => {
       anime.timeline({ loop: false }) // Loop set to false
         .add({
           targets: '.ml6 .letter',
-          translateY: ['1.1em', 0],
+          translateY: ['0.5em', 0],
           translateZ: 0,
           duration: 750,
           delay: (el, i) => 50 * i,
@@ -43,11 +43,11 @@ const AnimatedTitle = () => {
   }, []);
 
   return (
-    <h1 className="ml6" ref={titleRef}>
-      <span className="text-wrapper">
-        <span className="letters">Beautiful Qu j j j jjjj j  fdjdjbd dndndd dkd dfdkd fdkd fkdf dfkd dkd dkfdffkdf k estions</span>
+    <h3 className="ml6" ref={titleRef}>
+      <span className="text-wrapper nyght">
+        <span className="letters ">Wizardlenz XR Studio (OPC) Private Limited is a pioneering technology company specializing in immersive and futuristic technologies such as Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), the Metaverse, and Artificial Intelligence (AI). Our mission is to bridge the gap between these cutting-edge technologies and their practical applications in education, industry, and everyday life. We offer comprehensive training programs for students and professionals, providing placement opportunities for our graduates. Additionally, we develop innovative software products, create custom solutions for industrial clients, and promote social awareness about the transformative potential of these technologies.</span>
       </span>
-    </h1>
+    </h3>
   );
 };
 

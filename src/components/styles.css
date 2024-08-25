@@ -133,7 +133,9 @@
   font-family: "service";
   letter-spacing: 1rem;
   font-size: 400%;
-  color: #f629d0;
+  color: #C8A1E0;
+  text-shadow: 0 0 8px #fff;
+  margin-top: 3%;
 }
 
 @font-face {
@@ -148,30 +150,35 @@
 
 @font-face {
   font-family: "Sail";
-  src: url("/src/fonts/Sail-Regular.otf");
+  src: url("/src/fonts/Khuja-Uppercase.otf");
 }
 
 .sail{
   font-family: "Sail";
-  color: #f629d0;
-  font-size: 600%;
+  color: #7868E6;
+  font-size: 500%;
 }
 .ml6 {
   position: relative;
-  font-weight: 900;
-  font-size: 3.3em;
+  font-size: larger !important;
 }
 
 .ml6 .text-wrapper {
   position: relative;
   display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
   overflow: hidden;
 }
 
 .ml6 .letter {
   display: inline-block;
-  line-height: 1em;
+  line-height: 1.1em;
+}
+
+@font-face {
+  font-family: "nyght";
+  src: url("/src/fonts/Fustat.ttf");
+}
+
+.nyght{
+  font-family: "nyght";
 }

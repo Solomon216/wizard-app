@@ -4,8 +4,8 @@ import Scene from "./components/Scene";
 
 import "./App.css";
 import Services from "./components/Services";
-import ScrambleText from "./components/about";
-import AnimatedTitle from "./components/about2";
+import About from "./components/Abouts";
+import Navbar from "./components/navbar";
 import Contact from "./components/contact";
 import NavbarWithLogo from "./components/NavbarWithLogo";
 
@@ -14,11 +14,9 @@ function App() {
     <div>
       <NavbarWithLogo />
       <Hero />
-      <AnimatedTitle />
-      <ScrambleText />
+      <About />
       <Services />
       <Scene />
-      <Contact />
     </div>
   )
 }
