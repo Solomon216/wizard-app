@@ -5,7 +5,6 @@ import Scene from "./components/Scene";
 import "./App.css";
 import Services from "./components/Services";
 import About from "./components/Abouts";
-import Navbar from "./components/navbar";
 import Contact from "./components/contact";
 import NavbarWithLogo from "./components/NavbarWithLogo";
 
@@ -17,6 +16,7 @@ function App() {
       <About />
       <Services />
       <Scene />
+      <Contact />
     </div>
   )
 }

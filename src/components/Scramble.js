@@ -78,9 +78,9 @@ const ScrambleText = () => {
     };
 
     next();
-  }, []);
+  });
 
-  return <div className="text text-[#F9E400] font-bold" ref={elRef}></div>;
+  return <div className="text text-[#F9E400] font-bold text-2xl max-[435px]:" ref={elRef}></div>;
 };
 
 export default ScrambleText;

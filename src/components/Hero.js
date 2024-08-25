@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <div className="w-full h-screen relative">
       <ThreeScene className="absolute top-0 left-0 w-full h-full z-0" />
-      <div className="relative flex gap-6 flex-col justify-center items-center h-full z-10">
-        <h1 className="text-6xl text-white lizzie"><span className="wizard-header">WIZARDLENZ</span> XR STUDIO</h1>
+      <div className="relative flex gap-6 flex-col justify-center items-center z-10">
+        <h1 className="text-6xl text-white text-center max-[435px]:text-3xl lizzie"><span className="wizard-header">WIZARDLENZ</span> XR STUDIO</h1>
         <ScrambleText />
         <div className="relative w-[1031px] h-[300px] flex justify-center items-center">
           <div className="absolute w-[900px] h-[280px] bg-[#7935d0] rounded-full blur-[500px]"></div>

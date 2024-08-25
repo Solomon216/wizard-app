@@ -17,12 +17,25 @@ const Starfield = () => {
       camera.position.z = 1;
       camera.rotation.x = Math.PI / 2;
 
-      renderer = new THREE.WebGLRenderer();
+      renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio); // Improve the quality on high-DPI screens
       currentMount.appendChild(renderer.domElement);
 
       starGeo = new THREE.BufferGeometry();
-      const starCount = 6000;
+      
+      const isMobile = window.innerWidth <= 768; // Mobile screen size
+      const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024; // Tablet screen size
+      
+      let starCount;
+      if (isMobile) {
+        starCount = 2000; // Fewer stars for mobile devices
+      } else if (isTablet) {
+        starCount = 4000; // Moderate number of stars for tablets
+      } else {
+        starCount = 6000; // Full star count for desktops
+      }
+      
       const positions = new Float32Array(starCount * 3);
 
       for (let i = 0; i < starCount; i++) {
@@ -41,8 +54,9 @@ const Starfield = () => {
       let sprite = new THREE.TextureLoader().load(starTexture);
       let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 0.7,
+        size: isMobile ? 0.4 : (isTablet ? 0.6 : 0.7), // Smaller star size on mobile, medium on tablet
         map: sprite,
+        transparent: true,
       });
 
       stars = new THREE.Points(starGeo, starMaterial);
