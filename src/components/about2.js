@@ -17,8 +17,8 @@ const AnimatedTitle = () => {
           targets: '.ml6 .letter',
           translateY: ['0.5em', 0],
           translateZ: 0,
-          duration: 750,
-          delay: (el, i) => 50 * i,
+          duration: 300,
+          delay: (el, i) => 20 * i,
         });
     };
 
@@ -28,7 +28,7 @@ const AnimatedTitle = () => {
           animateText();
         }
       },
-      { threshold: 0.5 } // Animation triggers when 50% of the element is in view
+      { threshold: 0.3 } // Animation triggers when 50% of the element is in view
     );
 
     if (titleRef.current) {
