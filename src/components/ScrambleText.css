@@ -28,6 +28,12 @@
     font-size: 1.8em;
     text-align: center;
   }
+
+  @media screen and (max-width:435px) {
+    .text{
+      font-size: 1.3rem;
+    }
+  }
   
   .dud {
     color: #999; /* Color for scrambled characters */

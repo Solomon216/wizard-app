@@ -2,7 +2,6 @@ import React from 'react';
 
 const NavbarWithLogo = () => {
 
-
   return (
     <nav class="flex flex-wrap items-center justify-between p-5 bg-blue-200">      
       <img src="/src/images/star.png" className='' alt="" />

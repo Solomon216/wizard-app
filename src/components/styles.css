@@ -29,6 +29,17 @@
   padding: 50px 20px;
 }
 
+@media screen and (max-width:435px) {
+  .services-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-description{
+    display: none;
+  }
+}
+
 .service-item {
   position: relative;
   padding: 40px;
@@ -123,6 +134,14 @@
   color: transparent; /* This makes the gradient text visible */
 }
 
+@media screen and (max-width:435px) {
+
+  .lizzie{
+    letter-spacing:0.3rem;
+  }
+  
+}
+
 @font-face {
   font-family: "service";
   src: url("/src/fonts/LeoSansFree.ttf");
@@ -135,6 +154,14 @@
   color: #C8A1E0;
   text-shadow: 0 0 8px #fff;
   margin-top: 3%;
+}
+
+@media screen and (max-width:435px) {
+  .service-name{
+    font-size: 200%;
+    text-align: center;
+    letter-spacing: 0.4rem;
+  }
 }
 
 @font-face {
@@ -156,6 +183,13 @@
   font-family: "Sail";
   color: #7868E6;
   font-size: 500%;
+}
+@media screen and (max-width:435px) {
+
+  .sail{
+    font-size:200%;
+  }
+  
 }
 .ml6 {
   position: relative;
@@ -180,4 +214,20 @@
 
 .nyght{
   font-family: "nyght";
+}
+
+.starfield-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .starfield-container {
+    width:100%;  /* Reduce width on mobile */
+    height: 100vh; /* Reduce height on mobile */
+  }
 }

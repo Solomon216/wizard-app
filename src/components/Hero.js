@@ -10,8 +10,8 @@ export default function Hero() {
       <div className="relative flex gap-6 flex-col justify-center items-center z-10">
         <h1 className="text-6xl text-white text-center max-[435px]:text-3xl lizzie"><span className="wizard-header">WIZARDLENZ</span> XR STUDIO</h1>
         <ScrambleText />
-        <div className="relative w-[1031px] h-[300px] flex justify-center items-center">
-          <div className="absolute w-[900px] h-[280px] bg-[#7935d0] rounded-full blur-[500px]"></div>
+        <div className=" w-screen h-[300px] flex justify-center items-center">
+          <div className="absolute w-screen h-[280px] bg-[#7935d0] rounded-full blur-[500px]"></div>
           <img className="relative floating-image" src={wizard} alt="Placeholder" />
         </div>
       </div>
