@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/wizard-app/static/css/main.1b7b77a9.css",
-    "main.js": "/wizard-app/static/js/main.20ca76a8.js",
+    "main.css": "/wizard-app/static/css/main.1ff85e09.css",
+    "main.js": "/wizard-app/static/js/main.9e99e27e.js",
+    "static/media/Default_W_L_letters_wearing_a_wizard_cap_with_lens_It_can_be_2_b2147960-a634-4fcd-a172-48f4fb09e5c3_0.png": "/wizard-app/static/media/Default_W_L_letters_wearing_a_wizard_cap_with_lens_It_can_be_2_b2147960-a634-4fcd-a172-48f4fb09e5c3_0.977b9e2d91b940a17ca8.png",
+    "static/media/CmpnyNameWhite.png": "/wizard-app/static/media/CmpnyNameWhite.97a48d0b6325ab683170.png",
     "static/media/Montserrat-VariableFont_wght.ttf": "/wizard-app/static/media/Montserrat-VariableFont_wght.c28a96c369871653b853.ttf",
     "static/media/book.png": "/wizard-app/static/media/book.af075b779d18c5394f86.png",
     "static/media/Fustat.ttf": "/wizard-app/static/media/Fustat.eed0805b0909bffe17e8.ttf",
@@ -13,11 +15,11 @@
     "static/media/Khuja-Uppercase.otf": "/wizard-app/static/media/Khuja-Uppercase.a8c4844aca4bb14b5042.otf",
     "static/media/LeoSansFree.ttf": "/wizard-app/static/media/LeoSansFree.2ca6d9e12a050a6c3a75.ttf",
     "index.html": "/wizard-app/index.html",
-    "main.1b7b77a9.css.map": "/wizard-app/static/css/main.1b7b77a9.css.map",
-    "main.20ca76a8.js.map": "/wizard-app/static/js/main.20ca76a8.js.map"
+    "main.1ff85e09.css.map": "/wizard-app/static/css/main.1ff85e09.css.map",
+    "main.9e99e27e.js.map": "/wizard-app/static/js/main.9e99e27e.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b7b77a9.css",
-    "static/js/main.20ca76a8.js"
+    "static/css/main.1ff85e09.css",
+    "static/js/main.9e99e27e.js"
   ]
 }
