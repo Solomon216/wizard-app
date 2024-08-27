@@ -6,12 +6,12 @@ import "./App.css";
 import Services from "./components/Services";
 import About from "./components/Abouts";
 import Contact from "./components/contact";
-import NavbarWithLogo from "./components/NavbarWithLogo";
+import NavBar from "./components/NavbarWithLogo";
 
 function App() {
   return(
     <div>
-      <NavbarWithLogo />
+      <NavBar />
       <Hero />
       <About />
       <Services />

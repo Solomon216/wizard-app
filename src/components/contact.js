@@ -39,19 +39,6 @@ const Contact = () => {
             <button type="submit" className="submit-btn">Send Message</button>
           </form>
         </div>
-
-        <div className="contact-map">
-          <iframe
-            title="Our Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450944!2d144.9630576153186!3d-37.81410797975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b930e377af3b!2sFlinders%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sin!4v1605617073797!5m2!1sen!2sin"
-            width="100%"
-            height="300"
-            frameBorder="0"
-            allowFullScreen=""
-            aria-hidden="false"
-            tabIndex="0"
-          ></iframe>
-        </div>
       </div>
     </section>
   );
